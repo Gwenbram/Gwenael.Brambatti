@@ -315,11 +315,11 @@ body::before {
               opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* Wider segments for the projects page on desktop */
+/* Reduced segment width for the projects page on desktop as requested */
 @media (min-width: 992px) {
   .section-projets .segment {
-    max-width: 1600px;
-    width: 92%;
+    max-width: 1540px;
+    width: 88%;
   }
 }
 
@@ -418,6 +418,29 @@ body::before {
 .segment-title-link.no-arrow:hover .segment-title::after {
   content: '';
 }
+
+/* ---------- SOMMAIRE (TABLE OF CONTENTS) ---------- */
+.sommaire-list {
+  list-style: none;
+  padding: 0;
+}
+
+.sommaire-item {
+  margin-bottom: 0.8rem;
+  font-weight: 400;
+}
+
+.sommaire-link {
+  text-decoration: none;
+  color: var(--teal);
+  transition: color var(--transition);
+  font-weight: 500;
+}
+
+.sommaire-link:hover {
+  color: var(--teal-light);
+}
+
 
 /* ---------- PROJECT CARD ---------- */
 .project-card {
