@@ -60,7 +60,7 @@ body::before {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 1100;
   height: var(--header-h);
   background: rgba(255, 255, 255, 0.82);
   backdrop-filter: blur(18px) saturate(180%);
@@ -353,6 +353,11 @@ body::before {
 .segment-inner:hover {
   box-shadow: var(--shadow-lg);
   transform: translateY(-4px);
+}
+
+.segment-inner.no-hover:hover {
+  transform: none;
+  box-shadow: var(--shadow-md);
 }
 
 .segment-title {
