@@ -94,4 +94,31 @@
 
   // -------- INITIAL SCROLL CHECK --------
   onScroll();
+
+  // -------- IMAGE ZOOM LIGHTBOX --------
+  const projectImages = document.querySelectorAll('.project-img');
+  
+  // Create overlay dynamically
+  const zoomOverlay = document.createElement('div');
+  zoomOverlay.classList.add('zoom-overlay');
+  document.body.appendChild(zoomOverlay);
+
+  const zoomImg = document.createElement('img');
+  zoomOverlay.appendChild(zoomImg);
+
+  projectImages.forEach(function (img) {
+    img.addEventListener('click', function () {
+      zoomImg.src = this.src;
+      zoomImg.alt = this.alt;
+      zoomOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Prevent scroll
+    });
+  });
+
+  // Close on click anywhere in the overlay
+  zoomOverlay.addEventListener('click', function () {
+    zoomOverlay.classList.remove('active');
+    document.body.style.overflow = ''; // Restore scroll
+  });
 })();
+

@@ -315,6 +315,14 @@ body::before {
               opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+/* Wider segments for the projects page on desktop */
+@media (min-width: 992px) {
+  .section-projets .segment {
+    max-width: 1600px;
+    width: 92%;
+  }
+}
+
 /* Initial states — off-screen */
 .slide-left {
   transform: translateX(-80px);
@@ -405,6 +413,10 @@ body::before {
 .segment-title-link:hover .segment-title::after {
   content: ' →';
   font-weight: 300;
+}
+
+.segment-title-link.no-arrow:hover .segment-title::after {
+  content: '';
 }
 
 /* ---------- PROJECT CARD ---------- */
@@ -684,3 +696,51 @@ body::before {
     animation: none;
   }
 }
+
+/* ============ IMAGE ZOOM LIGHTBOX ============ */
+.zoom-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  padding: 2rem;
+}
+
+.zoom-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.zoom-overlay img {
+  max-width: 95%;
+  max-height: 95%;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  transform: scale(0.92);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.zoom-overlay.active img {
+  transform: scale(1);
+}
+
+.project-img {
+  cursor: zoom-in;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .zoom-overlay,
+  .zoom-overlay img {
+    transition: none;
+  }
+}
+
