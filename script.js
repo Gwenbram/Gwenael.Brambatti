@@ -96,7 +96,7 @@
   onScroll();
 
   // -------- IMAGE ZOOM LIGHTBOX --------
-  const projectImages = document.querySelectorAll('.project-img');
+  const projectImages = document.querySelectorAll('.section-projets .project-img');
   
   // Create overlay dynamically
   const zoomOverlay = document.createElement('div');
