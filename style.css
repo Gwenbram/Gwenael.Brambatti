@@ -781,3 +781,87 @@ body::before {
   }
 }
 
+/* ============ MAP LEGEND OVERLAY (HD STYLE) ============ */
+.project-img-wrapper {
+  position: relative; /* Ensure legend can be absolutely positioned */
+}
+
+.map-legend-overlay {
+  position: absolute;
+  top: 15%;
+  right: 3%;
+  background: white;
+  border: 1px solid #333;
+  padding: 12px 14px;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.75rem;
+  color: #000;
+  z-index: 10;
+  max-width: 180px;
+  pointer-events: none; /* Allow zoom click through the legend */
+}
+
+.legend-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 0.8rem;
+  line-height: 1.2;
+}
+
+.legend-subtitle {
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.legend-section {
+  margin-bottom: 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border: 0.5px solid #666;
+  flex-shrink: 0;
+}
+
+.legend-circle {
+  border: 1px solid #000;
+  border-radius: 50%;
+  background: transparent;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.legend-label {
+  white-space: nowrap;
+}
+
+/* Specific colors from the original map */
+.color-red-dark { background: #b82e2e; }
+.color-red-med { background: #d9534f; }
+.color-orange-red { background: #f0ad4e; }
+.color-orange-light { background: #ffd966; }
+.color-white-bg { background: #fff2cc; }
+.color-blue-light { background: #cfe2f3; }
+.color-blue-dark { background: #9fc5e8; }
+
+@media (max-width: 480px) {
+  .map-legend-overlay {
+    font-size: 0.6rem;
+    padding: 8px;
+    max-width: 130px;
+  }
+  .legend-title { font-size: 0.65rem; }
+  .legend-color { width: 12px; height: 12px; }
+}
