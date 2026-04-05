@@ -70,14 +70,26 @@
       },
       {
         root: null,
-        rootMargin: '0px 0px -60px 0px',
-        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px',
+        threshold: 0.05,
       }
     );
 
     revealElements.forEach(function (el) {
       revealObserver.observe(el);
     });
+
+    // Manually check if elements are already in view on load (esp. for hash links)
+    setTimeout(() => {
+      revealElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          el.classList.add('visible');
+          revealObserver.unobserve(el);
+        }
+      });
+    }, 150);
+
   } else {
     // Fallback: reveal everything immediately for older browsers
     revealElements.forEach(function (el) {

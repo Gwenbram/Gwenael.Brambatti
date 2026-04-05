@@ -434,7 +434,7 @@ body::before {
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.15rem;
   font-weight: 400;
 }
 
@@ -457,6 +457,15 @@ body::before {
 .sommaire-link:hover {
   color: var(--teal-light);
   text-decoration-color: var(--teal-light);
+}
+
+/* Compact summary segment */
+.segment-summary .segment-inner {
+  padding: 1.5rem 2.5rem;
+}
+
+.segment-summary .segment-title {
+  margin-bottom: 1rem;
 }
 
 
