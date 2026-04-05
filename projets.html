@@ -171,6 +171,14 @@
             <h3 style="margin-bottom: 0.5rem; font-size: 1.3rem; color: var(--teal);">Présentation du projet</h3>
             <p style="text-align: justify; margin-bottom: 2rem;">Ce projet cartographique, réalisé à partir des données de l'INSEE (Recensement de la Population 2017), a pour objectif d'analyser et de visualiser les flux de déplacement des actifs au sein du département de la Gironde. L'étude se concentre particulièrement sur la manière dont Bordeaux polarise les déplacements domicile-travail et structure l'organisation spatiale du territoire départemental.</p>
 
+            <h3 style="margin-bottom: 0.5rem; font-size: 1.3rem; color: var(--teal);">Méthodologie et Traitement des données</h3>
+            <p style="text-align: justify; margin-bottom: 1rem;">La réalisation de cette carte a nécessité un travail de préparation et de traitement de données statistiques :</p>
+            <ul style="text-align: justify; margin-bottom: 2.5rem; padding-left: 1.5rem; color: var(--text);">
+              <li style="margin-bottom: 0.75rem;"><strong>Analyse du taux d'actifs :</strong> J'ai calculé le taux d'actifs travaillant dans une autre commune que celle de leur résidence afin de mesurer l'interdépendance des territoires. Pour représenter cette donnée, j'ai utilisé une discrétisation Q6 associée à une palette de dégradés rouges, permettant d'identifier visuellement les zones à forte mobilité sortante.</li>
+              <li style="margin-bottom: 0.75rem;"><strong>Représentation des stocks :</strong> Le nombre total d'actifs de 15 ans ou plus par commune est représenté par des cercles proportionnels, offrant une lecture immédiate du poids démographique de chaque localité.</li>
+              <li><strong>Cartographie des flux :</strong> Pour illustrer les déplacements effectifs, j'ai sélectionné les flux intercommunaux supérieurs à 100 personnes. En appliquant la méthode de discrétisation de Jenks, j'ai pu regrouper ces flux de manière homogène pour rendre la carte lisible tout en soulignant les axes majeurs.</li>
+            </ul>
+
             <div class="project-card">
               <div class="project-img-wrapper" style="margin-bottom: 0;">
                 <img src="impact_mobilite_gironde.png" alt="Impact de la ville de Bordeaux sur la mobilité quotidienne en Gironde" class="project-img" style="image-rendering: -webkit-optimize-contrast; filter: contrast(1.05) saturate(1.1);">

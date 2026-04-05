@@ -490,6 +490,14 @@ body::before {
   line-height: 1.8;
 }
 
+/* Discrete project separator */
+.project-separator {
+  height: 1px;
+  width: 45%;
+  margin: 3.5rem auto;
+  background: linear-gradient(90deg, transparent, rgba(39, 121, 107, 0.15), transparent);
+}
+
 /* ---------- CV ---------- */
 .cv-content {
   text-align: center;
