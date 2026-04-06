@@ -441,11 +441,32 @@ body::before {
 
 @media (max-width: 768px) {
   .sommaire-item {
-    margin-bottom: 0.85rem;
-    padding: 0.8rem 1rem;
-    background: rgba(39, 121, 107, 0.03);
+    margin-bottom: 1rem;
+    padding: 1.2rem 1.2rem;
+    background: var(--white);
     border-radius: var(--radius-sm);
-    border: 1px solid rgba(39, 121, 107, 0.08);
+    box-shadow: 0 4px 20px rgba(39, 121, 107, 0.06);
+    border: 1px solid rgba(39, 121, 107, 0.1);
+    border-left: 4px solid var(--teal);
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    transition: transform var(--transition);
+  }
+
+  .sommaire-num {
+    font-size: 0.8rem;
+    color: var(--teal);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .sommaire-link {
+    font-size: 1.05rem;
+    line-height: 1.4;
+    text-decoration: none;
+    color: var(--text);
   }
 }
 
