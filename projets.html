@@ -123,22 +123,22 @@
           <h2 class="segment-title">Modélisation Spatiale des Milieux Forestiers : Approche par extraction de biotopes (33)</h2>
           <div class="segment-body">
             <h3 style="margin-bottom: 0.5rem; font-size: 1.3rem; color: var(--teal);">Contexte et Objectifs du Projet</h3>
-            <p style="text-align: justify; margin-bottom: 1rem;">Dans la continuité de mes travaux sur l'occupation du sol en Gironde, ce projet s'est intéressé à une dimension plus environnementale : l'identification automatisée de biotopes spécifiques. L'objectif était de localiser les forêts thermophiles de pente, des habitats naturels rares caractérisés par une végétation qui exige un fort ensoleillement et se développe exclusivement sur des versants abrupts.</p>
-            <p style="text-align: justify; margin-bottom: 2rem;">L'enjeu de cet exercice était de démontrer qu'un diagnostic écologique peut être pré-établi par un géomaticien en croisant des données hétérogènes (Vecteur et Raster). Cette approche a permis de cibler les zones à enjeux avant toute intervention de terrain.</p>
+            <p style="text-align: justify; margin-bottom: 1rem;">Dans la continuité de mes travaux sur l'occupation du sol en Gironde, ce projet s'est intéressé à une dimension plus environnementale : l'identification automatisée de biotopes spécifiques. L'objectif était de localiser les forêts thermophiles de pente, des habitats naturels rares caractérisés par une végétation qui exigeait un fort ensoleillement et se développait exclusivement sur des versants abrupts.</p>
+            <p style="text-align: justify; margin-bottom: 2rem;">L'enjeu de cet exercice était de démontrer qu'un diagnostic écologique pouvait être pré-établi par un géomaticien en croisant des données hétérogènes (Vecteur et Raster). Cette approche a permis de cibler les zones à enjeux avant toute intervention de terrain.</p>
 
             <h3 style="margin-bottom: 0.5rem; font-size: 1.3rem; color: var(--teal);">Méthodologie : De la donnée brute à l'extraction de biotope</h3>
             <p style="text-align: justify; margin-bottom: 1rem;">La complexité de ce travail a résidé dans l'absence de base de données répertoriant directement ces forêts. J'ai donc élaboré un protocole d'extraction multicritère sous QGIS :</p>
-            <ul style="text-align: justify; margin-bottom: 2.5rem; padding-left: 1.5rem; color: var(--text);">
+            <ul style="text-align: justify; margin-bottom: 0.5rem; padding-left: 1.5rem; color: var(--text);">
               <li style="margin-bottom: 0.75rem;"><strong>1. Analyse de la structure végétale (Vecteur) :</strong> J'ai isolé les formations de "Feuillus" et "Forêts mélangées" à partir de la base OCS 2020 de PIGMA. Cette étape constituait l'enveloppe physique du biotope.</li>
               <li style="margin-bottom: 0.75rem;"><strong>2. Modélisation de la contrainte topographique (Raster) :</strong> À partir d'un Modèle Numérique de Terrain (BD ALTI), j'ai généré deux indicateurs morphologiques fondamentaux :
-                <ul style="margin-top: 0.5rem; margin-bottom: 0.5rem; padding-left: 1.5rem; list-style-type: circle;">
-                  <li style="margin-bottom: 0.4rem;"><strong>La Pente :</strong> Cet indicateur a servi à repérer les terrains très inclinés. Sur ces versants raides, l'eau s'écoule vite et la terre s'accumule moins, ce qui oblige la végétation à s'adapter et crée ce biotope si particulier.</li>
-                  <li><strong>L'Exposition :</strong> Elle a permis de ne conserver que les versants Sud et Sud-Ouest, qui bénéficient d'un rayonnement solaire maximal.</li>
+                <ul style="margin-top: 0.5rem; margin-bottom: 0; padding-left: 1.5rem; list-style-type: circle;">
+                  <li style="margin-bottom: 0.4rem;"><strong>La Pente :</strong> Cet indicateur a servi à repérer les terrains très inclinés. Sur ces versants raides, l'eau s'écoulait vite et la terre s'accumulait moins, ce qui obligeait la végétation à s'adapter et créait ce biotope si particulier.</li>
+                  <li><strong>L'Exposition :</strong> Elle a permis de ne conserver que les versants Sud et Sud-Ouest, qui bénéficiaient d'un rayonnement solaire maximal.</li>
                 </ul>
               </li>
             </ul>
-            <p style="text-align: justify; margin-bottom: 1.5rem;">Cette première étape de visualisation illustre la superposition de la strate arborée avec les zones de relief. Elle mettait en évidence la rareté des espaces où la forêt de feuillus coïncidait avec les fortes pentes du département.</p>
-            <ul style="text-align: justify; margin-bottom: 2.5rem; padding-left: 1.5rem; color: var(--text);">
+            <p style="text-align: justify; margin-bottom: 0.5rem;">Cette première étape de visualisation illustrait la superposition de la strate arborée avec les zones de relief. Elle mettait en évidence la rareté des espaces où la forêt de feuillus coïncidait avec les fortes pentes du département.</p>
+            <ul style="text-align: justify; margin-bottom: 0.5rem; padding-left: 1.5rem; color: var(--text);">
               <li><strong>3. Synthèse par intersection :</strong> La phase finale consistait à croiser ces couches d'informations par un jeu de géotraitements. Je n'ai retenu que les espaces où la couverture forestière répondait simultanément aux critères de pente raide et d'exposition chaude.</li>
             </ul>
             <p style="text-align: justify; margin-bottom: 2rem;">Le résultat final révélait la localisation précise des biotopes thermophiles. La carte témoignait d'une distribution très ciblée, principalement le long des coteaux de la Garonne et des vallées encaissées, confirmant la pertinence du modèle d'extraction.</p>
