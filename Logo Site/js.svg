@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Fond transparent, pas de rectangle -->
+  
+  <!-- Lettres JS dessinées en vert canard -->
+  <!-- J -->
+  <text
+    x="5"
+    y="80"
+    font-family="'Outfit', 'Inter', Arial, sans-serif"
+    font-weight="700"
+    font-size="82"
+    fill="#27796b"
+    letter-spacing="-4"
+  >JS</text>
+</svg>
