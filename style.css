@@ -381,30 +381,6 @@ body::before {
   border-radius: 4px;
 }
 
-.project-subtitle {
-  margin-top: 2.5rem;
-  margin-bottom: 1.25rem;
-  font-family: 'Outfit', sans-serif;
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--teal);
-  letter-spacing: -0.01em;
-}
-
-.segment-body > .project-subtitle:first-child {
-  margin-top: 0;
-}
-
-.project-inner-title {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-family: 'Outfit', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--teal);
-  letter-spacing: -0.01em;
-}
-
 .segment-body p {
   margin-bottom: 1rem;
   font-size: 1.02rem;
@@ -858,3 +834,29 @@ body::before {
   }
 }
 
+/* ============ PROJECT TITLES HARMONIZATION (FORCED) ============ */
+.project-subtitle, 
+.segment-body h3 {
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem !important;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.4rem !important;
+  font-weight: 600 !important;
+  color: #27796b !important; /* HEX code strictly enforced */
+  letter-spacing: -0.01em;
+}
+
+.segment-body h3:first-child {
+  margin-top: 0 !important;
+}
+
+.project-inner-title,
+.segment-body h4 {
+  margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.2rem !important;
+  font-weight: 500 !important;
+  color: #27796b !important; /* HEX code strictly enforced */
+  letter-spacing: -0.01em;
+}
