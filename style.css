@@ -727,6 +727,7 @@ body::before {
 
 .monochrome-logo {
   filter: url(#tealify);
+  mix-blend-mode: multiply; /* Supprime le fond blanc des logos JPG/PNG */
 }
 
 .skill-name {
