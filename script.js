@@ -12,8 +12,39 @@
   const mainNav = document.getElementById('main-nav');
   const navLinks = document.querySelectorAll('.nav-link');
   const revealElements = document.querySelectorAll('[data-reveal]');
+  const scrollToTopBtn = document.getElementById('scroll-to-top');
+  const heroSubtitle = document.getElementById('hero-subtitle');
 
-  // -------- OVERLAY (mobile nav backdrop) --------
+  // -------- PAGE LOAD FADE-IN --------
+  window.addEventListener('load', function() {
+    document.body.classList.add('loaded');
+    if (heroSubtitle) {
+      setTimeout(startTypingEffect, 600);
+    }
+  });
+
+  // -------- TYPING EFFECT --------
+  function startTypingEffect() {
+    const text = heroSubtitle.getAttribute('data-text');
+    if (!text) return;
+    
+    let i = 0;
+    heroSubtitle.textContent = '';
+    heroSubtitle.classList.add('typing-cursor');
+
+    function type() {
+      if (i < text.length) {
+        heroSubtitle.textContent += text.charAt(i);
+        i++;
+        setTimeout(type, 45); // Adjust typing speed here
+      } else {
+        // finished typing
+      }
+    }
+    type();
+  }
+
+  // -------- HAMBURGER TOGGLE --------
   const overlay = document.createElement('div');
   overlay.classList.add('nav-overlay');
   document.body.appendChild(overlay);
@@ -46,16 +77,37 @@
     });
   });
 
-  // -------- HEADER SCROLL SHADOW --------
+  // -------- HEADER SCROLL & SCROLL-TO-TOP --------
   function onScroll() {
-    if (window.scrollY > 10) {
+    const scrollY = window.scrollY;
+    
+    // Header shadow
+    if (scrollY > 10) {
       header.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
     }
+
+    // Scroll to top button visibility
+    if (scrollToTopBtn) {
+      if (scrollY > 400) {
+        scrollToTopBtn.classList.add('visible');
+      } else {
+        scrollToTopBtn.classList.remove('visible');
+      }
+    }
   }
 
   window.addEventListener('scroll', onScroll, { passive: true });
+
+  if (scrollToTopBtn) {
+    scrollToTopBtn.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
 
   // -------- INTERSECTION OBSERVER — SCROLL REVEAL --------
   if ('IntersectionObserver' in window) {
