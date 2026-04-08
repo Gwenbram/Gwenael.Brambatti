@@ -13,36 +13,11 @@
   const navLinks = document.querySelectorAll('.nav-link');
   const revealElements = document.querySelectorAll('[data-reveal]');
   const scrollToTopBtn = document.getElementById('scroll-to-top');
-  const heroSubtitle = document.getElementById('hero-subtitle');
 
   // -------- PAGE LOAD FADE-IN --------
   window.addEventListener('load', function() {
     document.body.classList.add('loaded');
-    if (heroSubtitle) {
-      setTimeout(startTypingEffect, 600);
-    }
   });
-
-  // -------- TYPING EFFECT --------
-  function startTypingEffect() {
-    const text = heroSubtitle.getAttribute('data-text');
-    if (!text) return;
-    
-    let i = 0;
-    heroSubtitle.textContent = '';
-    heroSubtitle.classList.add('typing-cursor');
-
-    function type() {
-      if (i < text.length) {
-        heroSubtitle.textContent += text.charAt(i);
-        i++;
-        setTimeout(type, 45); // Adjust typing speed here
-      } else {
-        // finished typing
-      }
-    }
-    type();
-  }
 
   // -------- HAMBURGER TOGGLE --------
   const overlay = document.createElement('div');

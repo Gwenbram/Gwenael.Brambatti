@@ -293,18 +293,7 @@ body::before {
   min-height: 1.5em; /* Prevent layout jump */
 }
 
-/* Typing Cursor Effect */
-.typing-cursor::after {
-  content: '|';
-  margin-left: 2px;
-  animation: blink 1s step-end infinite;
-  color: var(--teal-light);
-}
-
-@keyframes blink {
-  from, to { opacity: 1; }
-  50% { opacity: 0; }
-}
+/* Typing Cursor Effect removed */
 
 .hero-cta-group {
   margin-top: 2.5rem;
